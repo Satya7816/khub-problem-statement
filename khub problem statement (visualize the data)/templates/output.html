@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualization Output</title>
+    <link rel="stylesheet" href="https://cdn.plot.ly/plotly-latest.min.css">
+    <link rel="stylesheet" href="static/output.css">
+</head>
+<body>
+    <h1>Data Visualization Output</h1>
+    {% if bar_plot_div %}
+        <h2>Filtered Data Visualization:</h2>
+        <div>
+            {{ bar_plot_div | safe }}
+        </div>
+        <div>
+            {{ pie_plot_div | safe }}
+        </div>
+    {% endif %}
+
+    {% if graduation_table %}
+        <h2>Filtered Data Table:</h2>
+        {{ graduation_table | safe }}
+    {% endif %}
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+</html>

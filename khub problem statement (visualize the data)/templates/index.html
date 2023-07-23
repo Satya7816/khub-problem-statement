@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualization - Upload File</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <div class="container" >
+        <h1>Data Visualization</h1>
+        <form action="/process_data" method="post" enctype="multipart/form-data">
+            <label for="data_file">Choose a file:</label>
+            <input type="file" name="data_file" id="data_file">
+            <br>
+            <label for="graduation_filter">Filter by Graduation:</label>
+            <select name="graduation_filter" id="graduation_filter">
+                <option value="all">All</option>
+                <option value="b.tech">B.Tech</option>
+                <option value="b.sc">B.Sc</option>
+            </select>
+            <br>
+            <label for="current_year_filter">Filter by Current Year:</label>
+            <input type="number" name="current_year_filter" id="current_year_filter" min="1" max="4">
+            <br>
+            <input type="submit" value="Upload and Process Data">
+        </form>
+    </div>
+</body>
+</html>
